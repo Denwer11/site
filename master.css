@@ -2,7 +2,7 @@
 body {
   margin: 0 auto;
   font-family: "Comic Sans MS", sans-serif;
-  background-image: url(../img/fone.jpg);
+  background-image: url(img/fone.jpg);
   background-position: center;
   background-attachment: fixed;
 }
