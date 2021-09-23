@@ -1,13 +1,13 @@
 User-agent:Yandex
 Disallow: /Admin
 Disallow: *?page=
-Sitemap: /sitemap.xml
+Sitemap: https://denwer11.github.io/sitemap.xml
 User-agent:googlebot
 Disallow: /Admin
 Disallow: *?page=
-Sitemap: /sitemap.xml
+Sitemap: https://denwer11.github.io/sitemap.xml
 User-agent:*
 Disallow: /Admin
 Disallow: *?page=
-Sitemap: /sitemap.xml
+Sitemap: https://denwer11.github.io/sitemap.xml
 
