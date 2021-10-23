@@ -1,16 +1,29 @@
-// Выбираем кнопку
-const btn = document.querySelector(".btn-toggle");
-// Выбираем таблицу стилей
-const theme = document.querySelector("#theme-link");
-// Отслеживаем щелчок по кнопке
-btn.addEventListener("click", function() {
-    // Если текущий адрес содержит "master.css"
-    if (theme.getAttribute("href") == "master.css") {
-        // …то переключаемся на "dark.css"
-        theme.href = "dark.css";
-        // В противном случае…
+const btn = document.getElementById("theme-button");
+const link = document.getElementById("theme-link");
+
+btn.addEventListener("click", ChangeTheme);
+
+function ChangeTheme() {
+    let masterTheme = "master.css";
+    let darkTheme = "dark.css";
+    let currTheme = link.getAttribute("href");
+    let theme;
+
+    if (currTheme === masterTheme) {
+        currTheme = darkTheme;
+        theme = "dark";
     } else {
-        // …переключаемся на "master.css"
-        theme.href = "master.css";
+        currTheme = masterTheme;
+        theme = "master";
     }
-});
+
+    link.setAttribute("href", currTheme);
+
+    Save(theme);
+}
+
+function Save(theme) {
+    let Request = new XMLHttpRequest();
+    Request.open("GET", "theme.php?theme=" + theme, true);
+    Request.send();
+}

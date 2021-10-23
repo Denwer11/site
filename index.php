@@ -2,9 +2,16 @@
 <html lang="ru">
 
 <head>
+    <?php
+    session_start();
+
+    if (!isset($_SESSION["theme"])) {
+        $_SESSION["theme"] = "master";
+    }
+    ?>
     <meta charset="utf-8" />
     <title>My Giro</title>
-    <link rel="stylesheet" href="master.css" id="theme-link" />
+    <link rel="stylesheet" href="<?php echo $_SESSION["theme"]; ?>.css" id="theme-link" />
     <link rel="icon" href="logo2.ico" type="image/x-icon" />
 </head>
 
@@ -15,7 +22,7 @@
             <img src="img/logo.png" alt="" class="logo-img" />
         </div>
         <!-- Кнопка смены темы -->
-        <button class="btn-toggle">Смена темы</button>
+        <div class="theme-button" id="theme-button">Сменить тему</div>
         <!-- Телефон -->
         <div class="phone">
             <input type="image" src="img/call.jpg" alt="Позвонить" class="call" />
@@ -290,8 +297,8 @@
                     </li>
                     <li class="subscribe">
                         <button type="submit" class="subscribe">
-                <img src="img/subscribe.png" class="subscribe" />
-              </button>
+                            <img src="img/subscribe.png" class="subscribe" />
+                        </button>
                     </li>
                 </ul>
             </form>

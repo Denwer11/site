@@ -12,7 +12,7 @@ body {
 
 /* Кнопка по смене темы */
 
-.btn-toggle {
+.theme-button {
     position: absolute;
     right: 12px;
     top: 5px;
@@ -26,7 +26,7 @@ body {
 
 /* Кнопка по смене темы при наведении */
 
-.btn-toggle:hover {
+.theme-button:hover {
     background: #555;
 }
 
@@ -58,7 +58,7 @@ header {
     display: flex;
     align-items: center;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 
